@@ -1,8 +1,10 @@
 
-const os = require('os');
+const fs = require('fs');
 
-var totalMemory = os.totalmem;
-var freeMemory = os.freemem;
+const files = fs.readdirSync('./');
+console.log(files);
 
-console.log(`Total Memory: ${totalMemory}`);
-console.log(`Free Memory: ${freeMemory}`);
+
+const log = require('./logger');
+
+log('java');
